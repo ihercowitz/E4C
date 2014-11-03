@@ -10,6 +10,16 @@
 
 (global-set-key (kbd "C-M-z") (if window-system 'suspend-frame 'suspend-emacs))
 
+;; Save keys
+(global-set-key (kbd "C-s") 'save-buffer)
+
+
+;; Find Keys
+(global-set-key (kbd "C-f") 'search-forward)
+
+
+;; Select All
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
 
 ;; NeoTree - A File tree for Emacs
 (require 'neotree)
@@ -31,3 +41,11 @@
 (add-hook 'cider-mode-hook
   (lambda ()
     (global-set-key [C-return] 'cider-eval-last-sexp)))
+
+
+;; Keymap to encode and decode buffer 
+;; To use, select ALL (control-a) and press:
+;; control-F9       -> encode buffer
+;; control-shift-F9 -> decode buffer 
+(global-set-key [C-f9] 'base64-encode-region)
+(global-set-key [C-S-f9] 'base64-decode-region)
