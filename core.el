@@ -52,3 +52,4 @@
 (define-key ac-completing-map "\t" 'ac-complete)
 
 (require 'redo+)
+(require 'neotree)
