@@ -13,10 +13,11 @@
 ;; Save keys
 (global-set-key (kbd "C-s") 'save-buffer)
 
+(global-set-key (kbd "C-o") 'open-file)
 
 ;; Find Keys
 (global-set-key (kbd "C-f") 'search-forward)
-
+(global-set-key (kbd "C-S-f") 'search-backward)
 
 ;; Select All
 (global-set-key (kbd "C-a") 'mark-whole-buffer)

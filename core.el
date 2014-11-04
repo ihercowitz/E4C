@@ -3,6 +3,12 @@
 (require 'redo+)
 (require 'neotree)
 (require 'popup-kill-ring)
+
+;; Set UTF-8 as default
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
   
 ;; Initialize the theme folder and set Cyberpunk as default theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
