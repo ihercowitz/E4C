@@ -22,6 +22,10 @@
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; Keep a list of recently opened files
+(recentf-mode 1) 
+
+
 (setq core-file (expand-file-name "core" user-emacs-directory))
 (setq packages-file (expand-file-name "packages" user-emacs-directory))
 (setq keymap (expand-file-name "keymap" user-emacs-directory))

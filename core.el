@@ -40,7 +40,6 @@
 
 
 ;; Auto complete Settings
-
 (setq ac-help-delay 0.2)
 (setq ac-quick-help-delay 0.2)
 

@@ -13,11 +13,16 @@
 ;; Save keys
 (global-set-key (kbd "C-s") 'save-buffer)
 
-(global-set-key (kbd "C-o") 'open-file)
+
+;; Open files
+(global-set-key (kbd "C-o") 'find-file)
+
+;; Show the recent files opened
+(global-set-key (kbd "C-S-o") 'recentf-open-files)
 
 ;; Find Keys
-(global-set-key (kbd "C-f") 'search-forward)
-(global-set-key (kbd "C-S-f") 'search-backward)
+(global-set-key (kbd "C-f") 'isearch-forward)
+(global-set-key (kbd "C-S-f") 'isearch-backward)
 
 ;; Select All
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
@@ -49,3 +54,11 @@
 
 ;;Set ESC as CANCEL key
 (global-set-key [escape] 'keyboard-quit)
+
+
+;; Toggle menubar
+(global-set-key (kbd "M-m") 'menu-bar-mode)
+
+
+;; Autocomplete
+(global-set-key [C-tab] 'auto-complete)
