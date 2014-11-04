@@ -24,7 +24,8 @@
     magit
     neotree
     paredit
-    parent-mode 
+    parent-mode
+    popup-kill-ring
     projectile 
     rainbow-delimiters
     redo+

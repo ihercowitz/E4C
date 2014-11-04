@@ -1,6 +1,18 @@
+;;Require area
+(require 'auto-complete-config)
+(require 'redo+)
+(require 'neotree)
+(require 'popup-kill-ring)
+  
 ;; Initialize the theme folder and set Cyberpunk as default theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'cyberpunk t)
+
+
+;; Indent using Space instead Tab 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2) ;; Indent with 2 spaces - lisp style
+(setq indent-line-function 'insert-tab)
 
 
 ;; Paredit
@@ -22,7 +34,7 @@
 
 
 ;; Auto complete Settings
-(require 'auto-complete-config)
+
 (setq ac-help-delay 0.2)
 (setq ac-quick-help-delay 0.2)
 
@@ -50,6 +62,3 @@
 
 ;; Set TAB as Autocomplete Key
 (define-key ac-completing-map "\t" 'ac-complete)
-
-(require 'redo+)
-(require 'neotree)

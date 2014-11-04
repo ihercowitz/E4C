@@ -22,20 +22,11 @@
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
 ;; NeoTree - A File tree for Emacs
-(require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
 
-;; CIDER - Evaluate expression Key Setting
-(add-hook 'cider-mode-hook
-  (lambda ()
-    (global-set-key [C-return] 'cider-eval-last-sexp)))
-
-
-;; NeoTree - A File tree for Emacs
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
+;; Indent on Enter
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; CIDER - Evaluate expression Key Setting
 (add-hook 'cider-mode-hook
@@ -49,3 +40,11 @@
 ;; control-shift-F9 -> decode buffer 
 (global-set-key [C-f9] 'base64-encode-region)
 (global-set-key [C-S-f9] 'base64-decode-region)
+
+
+;;Clipboard settings
+(global-set-key (kbd "C-v") 'clipboard-yank)
+(global-set-key (kbd "C-S-v") 'popup-kill-ring) ;; A travel into the past :)
+
+;;Set ESC as CANCEL key
+(global-set-key [escape] 'keyboard-quit)
