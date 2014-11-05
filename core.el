@@ -3,6 +3,7 @@
 (require 'redo+)
 (require 'neotree)
 (require 'popup-kill-ring)
+(require 'rainbow-delimiters)
 
 ;; Set UTF-8 as default
 (prefer-coding-system 'utf-8)
@@ -20,6 +21,8 @@
 (setq-default tab-width 2) ;; Indent with 2 spaces - lisp style
 (setq indent-line-function 'insert-tab)
 
+;; Start the Rainbow parenthesis
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; Paredit
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
