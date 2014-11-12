@@ -22,7 +22,7 @@
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Keep a list of recently opened files
+;; Keep a list of recently opened
 (recentf-mode 1) 
 
 

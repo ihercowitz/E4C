@@ -4,6 +4,7 @@
 (require 'neotree)
 (require 'popup-kill-ring)
 (require 'rainbow-delimiters)
+(require 'color-theme)
 
 ;; Set UTF-8 as default
 (prefer-coding-system 'utf-8)
@@ -13,7 +14,7 @@
   
 ;; Initialize the theme folder and set Cyberpunk as default theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'cyberpunk t)
+(color-theme-sanityinc-tomorrow-night)
 
 
 ;; Indent using Space instead Tab 
@@ -48,8 +49,6 @@
 
 (ac-config-default)
 
-(add-hook 'cider-mode-hook 'ac-nrepl-setup)
-(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
 (add-to-list 'ac-modes 'cider-mode)
 (add-to-list 'ac-modes 'cider-repl-mode)
 
@@ -66,7 +65,3 @@
                ac-source-words-in-same-mode-buffers
                ac-source-semantic
                ac-source-yasnippet))
-
-
-;; Set TAB as Autocomplete Key
-(define-key ac-completing-map "\t" 'ac-complete)

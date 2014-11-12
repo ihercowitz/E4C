@@ -11,7 +11,8 @@
 (global-set-key (kbd "C-M-z") (if window-system 'suspend-frame 'suspend-emacs))
 
 ;; Save keys
-(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "C-w") 'save-buffer)
+(global-set-key (kbd "C-S-w") 'save-)
 
 
 ;; Open files
@@ -39,6 +40,10 @@
   (lambda ()
     (global-set-key [C-return] 'cider-eval-last-sexp)))
 
+(add-hook 'lisp-mode-hook
+          (lambda ()
+            (global-set-key [C-return] 'eval-last-sexp)))
+
 
 ;; Keymap to encode and decode buffer 
 ;; To use, select ALL (control-a) and press:
@@ -62,3 +67,9 @@
 
 ;; Autocomplete
 (global-set-key [C-tab] 'auto-complete)
+
+
+;; On Lisp mode, use F5 to eval the hole buffer
+(add-hook 'lisp-interaction-mode-hook
+          (lambda ()
+            (global-set-key [f5] 'eval-current-buffer)))

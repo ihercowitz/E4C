@@ -16,7 +16,8 @@
     ac-cider
     clojure-mode
     clojure-snippets
-    cyberpunk-theme
+    color-theme
+    color-theme-sanityinc-tomorrow
     dash
     highlight-numbers
     highlight-parentheses
